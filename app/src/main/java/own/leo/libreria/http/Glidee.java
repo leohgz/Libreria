@@ -27,10 +27,12 @@ public class Glidee extends ActionBarActivity {
         com.bumptech.glide.Glide.with(this)
         .load("http://eurunners.miro.beecloud.me/images/recommendations/ten-una-meta-diaria.jpg").asBitmap().toBytes().into(new SimpleTarget<byte[]>() {
                 public void onResourceReady(byte[] resource, GlideAnimation<? super byte[]> glideAnimation) {
-        System.out.println(" " + resource);
+        System.out.println("bytes[]== " + resource);
         Bitmap bm = BitmapFactory.decodeByteArray(resource, 0, resource.length);
         img.setImageBitmap(bm);
         res = resource.clone();
+
+
         }});
     }
 
